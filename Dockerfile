@@ -5,7 +5,7 @@
 # since nginx image is bigger (143 lines), we're starting with it and adding node to it.
 # Use an official nginx image
 #  from https://github.com/nginxinc/docker-nginx/blob/ddbbbdf9c410d105f82aa1b4dbf05c0021c84fd6/mainline/alpine/Dockerfile
-FROM nginx:1.15-alpine
+FROM nginx:1.18-alpine
 
 
 # --
@@ -15,7 +15,7 @@ FROM nginx:1.15-alpine
 # "FROM node:10.9-alpine"
 # --
 
-ENV NODE_VERSION 10.9.0
+ENV NODE_VERSION 14.17.0
 
 RUN addgroup -g 1000 node \
     && adduser -u 1000 -G node -s /bin/sh -D node \
